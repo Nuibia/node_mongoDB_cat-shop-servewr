@@ -8,8 +8,6 @@ npm i
 npm run dev # 需要nodemon插件，直接自行全局安装即可
 ```
 
-```
-
 #### 接口文档
 
 简化版的商城 API 接口:http://localhost:3009
@@ -18,7 +16,7 @@ npm run dev # 需要nodemon插件，直接自行全局安装即可
 
 为第三方 api 接口调用提供代理服务
 
-​```
+```
 url
   /api/v2/proxy
 method
@@ -28,11 +26,11 @@ params
   data  post请求传递的数据
   method GET/POST,
   headers
-​```
+```
 
 - 文件上传
 
-​```
+```
 url
   /api/v1/common/file_upload
 method
@@ -46,11 +44,11 @@ params
   "message": "文件上传成功",
   "info": "/uploads/20190221/1550738827910.jpeg"
 }
-​```
+```
 
 - 用户注册
 
-​```
+```
 url
   /api/v1/auth/reg
 method
@@ -65,11 +63,11 @@ return
     "code": "success",
     "token": ""
   }
-​```
+```
 
 - 用户登录
 
-​```
+```
 url
   /api/v1/auth/login
 method
@@ -82,11 +80,11 @@ return
     "code": "success",
     "token": ""
   }
-​```
+```
 
 - 获取用户信息
 
-​```
+```
 url
   /api/v1/users/info
 method
@@ -96,11 +94,11 @@ headers
 return
   {
   }
-​```
+```
 
 - 获取商品信息
 
-​```
+```
 url
   /api/v1/products
 method
@@ -116,11 +114,11 @@ return
     "pages": 1,         // 当前页码
     "products": [...]
   }
-​```
+```
 
 - 根据 id 获取商品详情
 
-​```
+```
 url
   /api/v1/products/:id
 method
@@ -128,11 +126,11 @@ method
 return
   {
   }
-​```
+```
 
 - 加入购物车
 
-​```
+```
 url
   /api/v1/shop_carts
 method
@@ -147,11 +145,11 @@ return
     "code": "success",
     "message": "加入购物车成功！"
   }
-​```
+```
 
 - 获取用户购物车数据
 
-​```
+```
 url
   /api/v1/shop_carts
 method
@@ -160,11 +158,11 @@ headers
   authorization Bearer token  // 需要提供jwt信息
 return
   []
-​```
+```
 
 - 删除购物车信息
 
-​```
+```
 url
   /api/v1/shop_carts/:id
 method
@@ -174,11 +172,11 @@ headers
 return
   {
   }
-​```
+```
 
 - 订单提交
 
-​```
+```
 url
   /api/v1/orders
 method
@@ -205,11 +203,11 @@ return
       ...
     }
   }
-​```
+```
 
 - 获取订单列表
 
-​```
+```
 url
   /api/v1/orders
 method
@@ -225,11 +223,11 @@ return
     "pages": 1,         // 当前页码
     "orders": [...]
   }
-​```
+```
 
 - 根据 id 获取订单详情
 
-​```
+```
 url
   /api/v1/orders/:id
 method
@@ -237,11 +235,11 @@ method
 return
   {
   }
-​```
+```
 
 - 根据 id 删除详情
 
-​```
+```
 url
   /api/v1/orders/:id
 headers
@@ -251,11 +249,11 @@ method
 return
   {
   }
-​```
+```
 
 - 收货地址列表
 
-​```
+```
 url
   /api/v1/addresses
 method
@@ -271,11 +269,11 @@ return
     "pages": 1,         // 当前页码
     "addresses": [...]
   }
-​```
+```
 
 - 获取单条收货地址
 
-​```
+```
 url
   /api/v1/addresses/:id
 method
@@ -286,11 +284,11 @@ return
   {
     ... // 收货地址
   }
-​```
+```
 
 - 收货地址新增
 
-​```
+```
 url
   /api/v1/addresses
 method
@@ -308,11 +306,11 @@ params
 return
   {
   }
-​```
+```
 
 - 收货地址修改
 
-​```
+```
 url
   /api/v1/addresses/:id
 method
@@ -330,11 +328,11 @@ params
 return
   {
   }
-​```
+```
 
 - 收货地址删除
 
-​```
+```
 url
   /api/v1/addresses/:id
 method
@@ -344,7 +342,7 @@ headers
 return
   {
   }
-​```
+```
 
 #### 管理后台
 
@@ -354,7 +352,7 @@ return
 
 > 管理后台默认登录账号密码为 admin,此处管理员信息的管理功能暂未实现
 
-​```
+```
 url
   /api/v1/auth/manager_login
 params
@@ -365,11 +363,11 @@ return
     "code": "success",
     "token": ""
   }
-​```
+```
 
 获取管理员信息
 
-​```
+```
 url
   /api/v1/users/manager_info
 method
@@ -379,11 +377,11 @@ headers
 return
   {
   }
-​```
+```
 
 1. 获取用户列表
 
-​```
+```
 url
   /api/v1/admin/users
 method
@@ -401,11 +399,11 @@ return
     "pages": 1,         // 当前页码
     "products": [...]
   }
-​```
+```
 
 2. 新增用户
 
-​```
+```
 url
   /api/v1/admin/users
 method
@@ -428,11 +426,11 @@ return
     "updatedAt": "2019-02-21T12:10:34.346Z",
     "__v": 0
   }
-​```
+```
 
 3. 修改用户
 
-​```
+```
 url
   /api/v1/admin/users/5c6e953a224d199e15f12b9d
 method
@@ -454,11 +452,11 @@ return
     "updatedAt": "2019-02-21T12:10:34.346Z",
     "__v": 0
   }
-​```
+```
 
 4. 删除用户信息
 
-​```
+```
 url
   /api/v1/admin/users/5c6e953a224d199e15f12b9d
 method
@@ -476,11 +474,11 @@ return
     "updatedAt": "2019-02-21T12:10:34.346Z",
     "__v": 0
   }
-​```
+```
 
 5. 获取指定用户的信息
 
-​```
+```
 url
   /api/v1/admin/users/5c6e953a224d199e15f12b9d
 method
@@ -498,11 +496,11 @@ return
     "updatedAt": "2019-02-21T12:10:34.346Z",
     "__v": 0
   }
-​```
+```
 
 6. 修改用户密码
 
-​```
+```
 url
   /api/v1/admin/users/reset_pwd/:id
 method
@@ -522,11 +520,11 @@ return
     "updatedAt": "2019-02-21T12:10:34.346Z",
     "__v": 0
   }
-​```
+```
 
 7. 获取用户收货地址
 
-​```
+```
 url
   /api/v1/admin/addresses/:user_id
 method
@@ -542,13 +540,13 @@ return
     "pages": 1,         // 当前页码
     "addresses": [...]
   }
-​```
+```
 
 - 商品管理
 
 1. 获取商品列表
 
-​```
+```
 url
   /api/v1/admin/products
 method
@@ -565,11 +563,11 @@ return
     "pages": 1,         // 当前页码
     "products": [...]
   }
-​```
+```
 
 2. 新增商品信息
 
-​```
+```
 url
   /api/v1/admin/products
 method
@@ -595,11 +593,11 @@ return
     "updatedAt": "2019-02-21T12:10:34.346Z",
     "__v": 0
   }
-​```
+```
 
 3. 修改商品信息
 
-​```
+```
 url
   /api/v1/admin/products/:id
 method
@@ -626,11 +624,11 @@ return
     "updatedAt": "2019-02-21T12:10:34.346Z",
     "__v": 0
   }
-​```
+```
 
 4. 删除商品信息
 
-​```
+```
 url
   /api/v1/admin/products/:id
 method
@@ -649,11 +647,11 @@ return
     "updatedAt": "2019-02-21T12:15:26.669Z",
     "__v": 0
 }
-​```
+```
 
 5. 根据 ID 获取商品信息
 
-​```
+```
 url
   /api/v1/admin/products/:id
 method
@@ -672,13 +670,13 @@ return
     "updatedAt": "2019-02-21T12:15:26.669Z",
     "__v": 0
 }
-​```
+```
 
 - 商品分类管理
 
 1. 获取商品分类列表
 
-​```
+```
 url
   /api/v1/admin/product_categories
 method
@@ -695,11 +693,11 @@ return
     "pages": 1,         // 当前页码
     "categories": [...]
   }
-​```
+```
 
 2. 新增商品分类信息
 
-​```
+```
 url
   /api/v1/admin/product_categories
 method
@@ -713,11 +711,11 @@ headers
 return
   {
   }
-​```
+```
 
 3. 修改商品信息
 
-​```
+```
 url
   /api/v1/admin/product_categories/:id
 method
@@ -732,11 +730,11 @@ return
   返回商品分类信息
   {
   }
-​```
+```
 
 4. 删除商品分类信息
 
-​```
+```
 url
   /api/v1/admin/product_categories/:id
 method
@@ -747,11 +745,11 @@ return
   返回商品分类信息
   {
   }
-​```
+```
 
 5. 根据 ID 获取商品分类信息
 
-​```
+```
 url
   /api/v1/admin/product_categories/:id
 method
@@ -762,13 +760,13 @@ return
   返回商品分类信息
   {
 }
-​```
+```
 
 - 订单管理
 
 1. 获取订单列表
 
-​```
+```
 url
   /api/v1/admin/orders
 method
@@ -786,11 +784,11 @@ return
     "pages": 1,         // 当前页码
     "orders": [...]
   }
-​```
+```
 
 2. 修改商品信息
 
-​```
+```
 url
   /api/v1/admin/orders/:id
 method
@@ -803,11 +801,11 @@ return
   返回信息
   {
   }
-​```
+```
 
 3. 删除商品分类信息
 
-​```
+```
 url
   /api/v1/admin/orders/:id
 method
@@ -818,11 +816,11 @@ return
   返回信息
   {
   }
-​```
+```
 
 4. 根据 ID 获取商品分类信息
 
-​```
+```
 url
   /api/v1/admin/orders/:id
 method
@@ -833,5 +831,6 @@ return
   返回订单信息
   {
 }
-​```xxxxxxxxxx url  /api/v1/book_chapters/:idmethod  getparamsheadersreturn  {  }
+​```xxxxxxxxxx url  /api/v1/book_chapters/:idmethod  getparamsheadersreturn  {  }
 ```
+
